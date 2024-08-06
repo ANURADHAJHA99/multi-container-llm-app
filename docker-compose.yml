@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  node-conversation-api:
+    build:
+      context: ./node-conversation-api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - python-llm-service
+    environment:
+      - DB_HOST=e2e-102-21.ssdcloudindia.net
+      - DB_PORT=5432
+      - DB_USER=admin
+      - DB_PASS=Letsmakeshalom!24
+      - DB_NAME=shalom
+      - ACCESS_TOKEN_SECRET_KEY=SRu4/Jr2rHRpHSLE+rGhHlMHBz2CxC43bIuWPUCVDDY=
+      - REFRESH_TOKEN_SECRET_KEY=D8OjlbCi6fSPty+Pl5H4PCChwuUCj0lwzAff5VHKqc0=
+    networks:
+      - app-network
+
+  python-llm-service:
+    build:
+      context: ./python-llm-service
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
