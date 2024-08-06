@@ -1,0 +1,6 @@
+[submodule "node-conversation-api"]
+	path = node-conversation-api
+	url = https://github.com/ANURADHAJHA99/node-api-server.git
+[submodule "python-llm-service"]
+	path = python-llm-service
+	url = https://github.com/ANURADHAJHA99/python-llm-server.git
