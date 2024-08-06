@@ -15,7 +15,7 @@ This project consists of two main components: a Node.js API server (`node-conver
 1. Clone the repository.
 
     ```sh
-    git clone git@github.com:ANURADHAJHA99/multi-container-llm-app.git
+    git clone --recurse-submodules https://github.com/ANURADHAJHA99/multi-container-llm-app.git
     cd multi-container-llm-app
     ```
 
